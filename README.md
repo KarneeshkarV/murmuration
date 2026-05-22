@@ -80,13 +80,13 @@ node tests/test-options.js
 ## Configuration
 
 - **API Key**: OpenRouter API key (required)
-- **Model**: OpenRouter model ID (default: `anthropic/claude-sonnet-4-20250514`)
+- **Model**: OpenRouter model ID (default: `anthropic/claude-sonnet-4.6`)
 - **Daily Budget**: Max art generations per day (default: 3, range: 1-20)
 - **Custom Selectors**: Override CSS selectors for ChatGPT/Claude scraping
 
 ## Estimated Cost
 
-Using Claude Sonnet 4.6 (`anthropic/claude-sonnet-4-6`) via OpenRouter at $3/M input, $15/M output tokens:
+Using Claude Sonnet 4.6 (`anthropic/claude-sonnet-4.6`) via OpenRouter at $3/M input, $15/M output tokens:
 
 | Daily budget | Tokens/day | Cost/day | Cost/month |
 |---|---|---|---|

@@ -1,4 +1,4 @@
-const DEFAULT_MODEL = 'anthropic/claude-sonnet-4-20250514';
+const DEFAULT_MODEL = 'anthropic/claude-sonnet-4.6';
 const OPENROUTER_ENDPOINT = 'https://openrouter.ai/api/v1/chat/completions';
 
 class OpenRouterClient {

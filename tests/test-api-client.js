@@ -74,7 +74,7 @@ async function testGenerateCompletion() {
   console.log('\n--- generateCompletion ---');
   resetFetch();
 
-  const client = new OpenRouterClient('sk-test-key', 'anthropic/claude-sonnet-4-20250514');
+  const client = new OpenRouterClient('sk-test-key', 'anthropic/claude-sonnet-4.6');
   mockSuccess('<html><body>Test art</body></html>');
 
   const result = await client.generateCompletion('Generate art', { maxTokens: 8000, temperature: 1.0 });
@@ -96,7 +96,7 @@ async function testGenerateCompletion() {
   assert(opts.headers['Authorization'] === 'Bearer sk-test-key', 'Authorization header set');
 
   const body = JSON.parse(opts.body);
-  assert(body.model === 'anthropic/claude-sonnet-4-20250514', 'Model in request body');
+  assert(body.model === 'anthropic/claude-sonnet-4.6', 'Model in request body');
   assert(Array.isArray(body.messages), 'messages is array');
   assert(body.messages[0].role === 'user', 'message role is user');
   assert(body.messages[0].content === 'Generate art', 'message content matches prompt');
@@ -115,8 +115,8 @@ async function testDefaultModel() {
 
   const body = JSON.parse(fetchCalls[0].options.body);
   assert(
-    body.model === 'anthropic/claude-sonnet-4-20250514',
-    'Default model is anthropic/claude-sonnet-4-20250514'
+    body.model === 'anthropic/claude-sonnet-4.6',
+    'Default model is anthropic/claude-sonnet-4.6'
   );
 }
 
